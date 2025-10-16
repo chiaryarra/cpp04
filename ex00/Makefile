@@ -1,10 +1,10 @@
-NAME = zombie
+NAME = polymorphism
 
 CPP = c++
 
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRCS = main.cpp Dog.cpp Cat.cpp Animal.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
