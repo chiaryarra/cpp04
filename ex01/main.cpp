@@ -3,17 +3,17 @@
 
 int main()
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
-    delete meta;
-    delete i;
-    delete j;
-
+    const Animal* objects[5];
+    int i = -1;
+    while (++i < 5)
+    {
+        if (i % 2 == 0)
+            objects[i] = new Cat();
+        else
+            objects[i] = new Dog();
+    }
+    i = -1;
+    while (++i < 5)
+        delete objects[i];
     return 0;
 }
